@@ -176,7 +176,13 @@ namespace StopWatch
 
                 Properties.Settings.Default.CheckForUpdate = CheckForUpdate;
 
-                Properties.Settings.Default.Save();
+                try
+                {
+                    Properties.Settings.Default.Save();
+                }
+                catch
+                {
+                }
             }
         }
 
